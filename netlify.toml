@@ -1,0 +1,17 @@
+[build]
+  base = "asesoria"
+  command = "npm run build"
+  publish = "asesoria/dist/client"
+
+[build.environment]
+  NODE_VERSION = "20"
+  BUN_VERSION = "1.0"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[context.production.environment]
+  NODE_ENV = "production"
